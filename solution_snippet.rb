@@ -56,7 +56,7 @@ class Invoice
 
   private
   def amount_owed
-    invoice_total - payment.sum(:amount)
+    invoice_total - payments.sum(:amount)
   end
 
   def translate_invoice_total_to_cents
